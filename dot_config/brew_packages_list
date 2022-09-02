@@ -1,0 +1,12 @@
+brew install reattach-to-user-namespace
+neovim
+tmux
+tldr
+zsh-syntax-highlighting
+zsh-autosuggestions
+chezmoi
+task
+go
+fzf
+nodejs
+taskwarrior-tui
