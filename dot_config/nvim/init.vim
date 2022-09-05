@@ -20,10 +20,10 @@ Plug 'mhinz/vim-startify'
 " brew install ripgrep
 " Then do :checkhealth telescope to verify the installation.
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-lua/plenary.nvim'  " required for telescope
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " recommanded
 
-" Better syntax highlighting
+"Better syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Auto complete
@@ -281,11 +281,6 @@ require'nvim-treesitter.configs'.setup {
     },
   ensure_installed = { "norg", --[[ other parsers you would wish to have ]] },
   }
-EOF
-
-" Telescope configuration
-lua <<EOF
-require('telescope').load_extension('fzf')
 EOF
 
 " neogen config
