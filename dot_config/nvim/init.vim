@@ -4,6 +4,7 @@
 
 " Depedency:
 " - Install exuberant-ctags (sudo apt install exuberant-ctags) for vim-tagbar plugin
+" - fd and fzf for telescope (search)
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
