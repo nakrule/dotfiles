@@ -27,6 +27,9 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " recommanded
 "Better syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+"Jump to any word in the screen
+Plug 'ggandor/leap.nvim'
+
 " Auto complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -288,4 +291,11 @@ require('neogen').setup {
         enabled = true,             --if you want to disable Neogen
         input_after_comment = true, -- (default: true) automatic jump (with insert mode) on inserted annotation
 }
+EOF
+
+
+""""""" Leap configuration
+" To jump to an on-screen word, just use s (forward) or S (backward) and write the word.
+lua <<EOF
+require'leap'.set_default_keymaps()
 EOF
