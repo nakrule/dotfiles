@@ -149,3 +149,20 @@ fi
 
 # Enable AWS commands autocomplete
 export PATH=/opt/homebrew/bin/:$PATH
+
+
+# Bypass the aws proxy to install go librairies
+# Documented here: https://w.amazon.com/bin/view/GoLang/#HGomoduleproxies
+go env -w GOPROXY=direct
+
+# AWS autocompletion for the CLI
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/opt/homebrew/bin//aws_completer' aws
+
+# Isengard cli autocomplete
+eval "$(isengardcli shell-profile)"
+# OR if you do not want to have the AWS profile name in your prompt after an assume:
+# eval "$(isengardcli shell-profile --keep-prompt)"
+# OR if you do not want shell integration, but just want BASH/ZSH autocompletion:
+# eval "$(isengardcli shell-autocomplete)"
