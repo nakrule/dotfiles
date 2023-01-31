@@ -17,10 +17,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # for ZSH
 case "$OSTYPE" in
   darwin*)
-	ZSH_THEME="robbyrussell"
+  ZSH_THEME="robbyrussell"
   ;;
   linux*)
-	ZSH_THEME="agnoster"
+  ZSH_THEME="agnoster"
   ;;
 esac
 
@@ -151,9 +151,9 @@ function gitp() {
 
 # Start tmux with new shell, creating a session named main.
 # If the session already exist, re-attach.
-#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#  exec tmux new-session -A -s main
-#fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s main
+fi
 
 # Enable AWS commands autocomplete
 export PATH=/opt/homebrew/bin/:$PATH
@@ -171,7 +171,7 @@ complete -C '/opt/homebrew/bin//aws_completer' aws
 # Isengard cli autocomplete (MacOS only)
 case "$OSTYPE" in
   darwin*)
-  	eval "$(isengardcli shell-profile)"
+    eval "$(isengardcli shell-profile)"
     # OR if you do not want to have the AWS profile name in your prompt after an assume:
     # eval "$(isengardcli shell-profile --keep-prompt)"
     # OR if you do not want shell integration, but just want BASH/ZSH autocompletion:
