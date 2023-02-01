@@ -178,3 +178,6 @@ case "$OSTYPE" in
     # eval "$(isengardcli shell-autocomplete)"
   ;;
 esac
+
+# Add this path to work with go protocol buffer
+export PATH="$PATH:$(go env GOPATH)/bin"
