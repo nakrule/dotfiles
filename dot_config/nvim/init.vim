@@ -24,10 +24,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'  " required for telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " recommanded
 
-" GitHub copilot
-Plug 'github/copilot.vim'
-
-"Better syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "Jump to any word in the screen
@@ -248,9 +244,6 @@ set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
-
-" Enable github copilot
-let g:coc_github_copilot_enabled = 1
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
