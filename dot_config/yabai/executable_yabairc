@@ -29,7 +29,7 @@ yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 # move a windows in the middle of another windows to swap them
-yabai -m mouse_drop_action swap
+yabai -m config mouse_drop_action swap
 
 # Disaple specific apps (not managed by yabai)
 yabai -m rule --add app="^System Settings$" manage=off
