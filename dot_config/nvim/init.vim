@@ -2,7 +2,7 @@
 """ Nakrule nvim config file """
 """"""""""""""""""""""""""""""""
 
-" Depedency:
+" Dependency:
 " - Install exuberant-ctags (sudo apt install exuberant-ctags) for vim-tagbar plugin
 " - fd and fzf for telescope (search)
 
@@ -15,14 +15,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 
 " Fuzzy finder with live preview.
-" Other plugins are depedencies.
+" Other plugins are dependencies.
 " Need to install 2 things:
 " brew install fd
 " brew install ripgrep
 " Then do :checkhealth telescope to verify the installation.
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'  " required for telescope
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " recommanded
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " recommended
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -65,7 +65,7 @@ Plug 'morhetz/gruvbox'
 " brew install universal-ctags
 Plug 'majutsushi/tagbar' " For tag bar list in the windows
 
-Plug 'psliwka/vim-smoothie' " Super smooth scrooling in VIM with CTRL-U/D
+Plug 'psliwka/vim-smoothie' " Super smooth scrolling in VIM with CTRL-U/D
 
 " Go programming language, build, run, error detection, auto complete...
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -95,7 +95,7 @@ let g:gruvbox_contrast_dark = 'hard'
 
 set nonumber
 set expandtab "use space instead of tab
-set shiftwidth=2 "number of space char inserted for identation
+set shiftwidth=2 "number of space char inserted for indentation
 set tabstop=2
 
 " map escape key to leave terminal mode
@@ -190,14 +190,14 @@ nnoremap <space>t :TagbarToggle<CR>
 
 """"""" Tagbar configuration
 
-" Remape Tagbar show prototype to o (default is space, but it fuck up SPACE + number)
+" Remap Tagbar show prototype to o (default is space, but it messes up SPACE + number)
 let g:tagbar_map_showproto = "o"
 
 """"""" Netrw (file browser) configuration
 
 " Remove banner
 let g:netrw_banner = 0
-" Configre netrw like default nerdtree
+" Configure netrw like default nerdtree
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
@@ -206,7 +206,7 @@ let g:netrw_winsize = 15
 """"""" Coc configuration
 
 " This is just a copy of the example in https://github.com/neoclide/coc.nvim. Following standard
-" recommandation.
+" recommendation.
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -266,7 +266,7 @@ endfunction
 " Add `:Format` command to format current buffer. (Like gg=G but better)
 command! -nargs=0 Format :call CocAction('format')
 
-""""""" Treesiter configuration from there Github documentation.
+""""""" Treesitter configuration from their GitHub documentation.
 " Without that, treesitter is not enabled by default.
 lua <<EOF
 require'nvim-treesitter.configs'.setup {

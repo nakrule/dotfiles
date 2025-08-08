@@ -8,7 +8,7 @@
 #   variable=      -- By specifying no value, this means no default
 #   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
 
-# You can also refence environment variables:
+# You can also reference environment variables:
 #   variable=$HOME/task
 #   variable=$VALUE
 
