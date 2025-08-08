@@ -1,5 +1,5 @@
 [keys.insert]
-f = { d = "normal_mode" } # Maps `ga` to show possible code actions
+f = { d = "normal_mode" } # Maps `fd` to enter normal mode
 
 [keys.normal]
 # Muscle memory

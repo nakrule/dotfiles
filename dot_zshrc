@@ -1,5 +1,5 @@
 # Requirements
-# Run theses two commands to install zsh autocomplete and syntax highlit:
+# Run these two commands to install zsh autocomplete and syntax highlighting:
 # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
@@ -150,7 +150,7 @@ function gitp() {
 }
 
 # Start tmux with new shell, creating a session named main.
-# If the session already exist, re-attach.
+# If the session already exists, re-attach.
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux new-session -A -s main
 fi
@@ -159,7 +159,7 @@ fi
 export PATH=/opt/homebrew/bin/:$PATH
 
 
-# Bypass the aws proxy to install go librairies
+# Bypass the aws proxy to install go libraries
 # Documented here: https://w.amazon.com/bin/view/GoLang/#HGomoduleproxies
 go env -w GOPROXY=direct
 
